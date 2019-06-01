@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Cobb's Auto Service</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <center>
+                <h2>Cobb's Auto Service</h2>
+                <p>Inventory Management System</p>
+                <h:graphicImage url="#{resource['images:r32.jpg']}" 
+                                alt="Nissan Skyline R-32"/>
+            </center>
+            
+            <center>
+                <h3>Add Vehicle to the Inventory</h3>
+                <p>Enter the vehicles information</p>
+                <p>
+                    Vehicle Make: 
+                    <h:inputText id="make"
+                                 title="The maker of the vehicle"
+                                 value="#{hello.vehicleMake}" />
+                </p>
+                <p>
+                    Vehicle Model: 
+                    <h:inputText id="model"
+                                 title="Model of the vehicle"
+                                 value="#{hello.vehicleModel}" />
+                </p>
+                <p>
+                    Vehicle Year: 
+                    <h:inputText id="year"
+                                 title="Year of the vehicle"
+                                 value="#{hello.vehicleYear}" />
+                </p>
+                <p>
+                    Vehicle Value: 
+                    <h:inputText id="value"
+                                 title="Dollar value of the vehicle"
+                                 value="#{hello.vehicleValue}" />
+                </p>
+                <p>
+                    Condition:
+                    <h:selectOneListbox value="#{hello.vehicleCondition}">
+                        <f:selectItem itemValue="Brand New" itemLabel="Brand New" />
+                        <f:selectItem itemValue="Slightly Used" itemLabel="Slightly Used" />
+                        <f:selectItem itemValue="Average Vehicle" itemLabel="Average Vehicle" />
+                        <f:selectItem itemValue="Rust / Damaged" itemLabel="Rust / Damaged" />
+                        <f:selectItem itemValue="Junker" itemLabel="Junker" />
+                    </h:selectOneListbox>
+                </p>
+                <h:commandButton id="addcar" value="Add Vehicle" action="caradd" />
+                <h:commandButton id="back" value="Back" action="index" />
+            </center>
+            
+            
+            
+        </h:form>
+    </h:body>
+</html>
